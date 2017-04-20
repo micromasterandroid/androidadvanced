@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".recipemain.ui.RecipeMainActivity">
+    <item
+        android:id="@+id/action_list"
+        android:title="@string/recipemain.menu.action.list"
+        android:icon="@android:drawable/btn_star_big_off"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/global.menu.action.logout"
+        app:showAsAction="never" />
+</menu>

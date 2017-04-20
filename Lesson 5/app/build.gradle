@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+repositories {
+    mavenCentral()
+}
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "edu.galileo.android.facebookrecipes"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "FACEBOOK_PROVIDER_AUTH", project.property('FACEBOOK_PROVIDER') + project.property('FACEBOOK_APP_ID')
+            resValue "string", "FACEBOOK_APP_ID", project.property('FACEBOOK_APP_ID')
+            buildConfigField "String", "FOOD_API_KEY", project.property('FOOD_API_KEY')
+        }
+        debug {
+            resValue "string", "FACEBOOK_PROVIDER_AUTH", project.property('FACEBOOK_PROVIDER') + project.property('FACEBOOK_APP_ID')
+            resValue "string", "FACEBOOK_APP_ID", project.property('FACEBOOK_APP_ID')
+            buildConfigField "String", "FOOD_API_KEY", project.property('FOOD_API_KEY')
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+
+    compile "com.facebook.android:facebook-android-sdk:$rootProject.ext.facebookVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    compile "org.greenrobot:eventbus:$rootProject.ext.eventbusVersion"
+
+    apt "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+    compile "javax.annotation:jsr250-api:$rootProject.ext.jsr250Version"
+    compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+
+    apt "com.github.Raizlabs.DBFlow:dbflow-processor:$rootProject.ext.dbflowVersion"
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:$rootProject.ext.dbflowVersion"
+    compile "com.github.Raizlabs.DBFlow:dbflow:$rootProject.ext.dbflowVersion"
+
+    testCompile "org.robolectric:robolectric:$rootProject.ext.robolectricVersion"
+    testCompile "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+}

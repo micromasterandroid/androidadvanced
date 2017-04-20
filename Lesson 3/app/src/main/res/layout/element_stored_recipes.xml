@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:layout_width="@dimen/recipes_list_image_size"
+        android:layout_height="@dimen/recipes_list_image_size"
+        android:id="@+id/imgRecipe"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:layout_weight="1"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:id="@+id/txtRecipeName"
+        android:layout_below="@+id/imgRecipe"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRecipeName"
+        android:id="@+id/layoutButtons"
+        android:layout_centerHorizontal="true">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/btn_star_big_off"
+            android:padding="@dimen/row_icons_padding"
+            android:background="@android:color/transparent"
+            android:id="@+id/imgFav" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_delete"
+            android:padding="@dimen/row_icons_padding"
+            android:tint="@android:color/darker_gray"
+            android:background="@android:color/transparent"
+            android:id="@+id/imgDelete" />
+    </LinearLayout>
+
+    <com.facebook.share.widget.ShareButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/row_icons_padding"
+        android:id="@+id/fbShare"
+        android:layout_below="@id/layoutButtons"
+        android:layout_centerHorizontal="true"/>
+
+    <com.facebook.share.widget.SendButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/row_icons_padding"
+        android:id="@+id/fbSend"
+        android:layout_below="@+id/fbShare"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

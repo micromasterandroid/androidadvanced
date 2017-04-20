@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMedia"
+            android:src="@mipmap/ic_launcher"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:id="@+id/txtTweet"
+            android:text="@string/app_name"
+            android:layout_below="@+id/imgMedia"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
