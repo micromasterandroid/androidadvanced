@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "941668665389",
+    "firebase_url": "https://android-edx-course.firebaseio.com",
+    "project_id": "android-edx-course",
+    "storage_bucket": "android-edx-course.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941668665389:android:66d9ee082ad20f6f",
+        "android_client_info": {
+          "package_name": "edu.galileo.android.androidchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941668665389-pj8c247oc2vijudqkc0o8cb6808jksri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc44G7wWEK8njEuIPzQ655zSsDw38fT8M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

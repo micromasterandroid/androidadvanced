@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Android Chat</string>
+
+    <string name="login.message.email">Email</string>
+    <string name="login.message.password">Password</string>
+    <string name="login.message.signin">Sign In</string>
+    <string name="login.message.signup">Sign up</string>
+    <string name="login.notice.message.useradded">You have successfully registered and logged in</string>
+    <string name="login.error.message.signin">Unable to login %s</string>
+    <string name="login.error.message.signup">Unable to sing up %s</string>
+    <string name="contactlist.menu.action.signoff">Sign out</string>
+    <string name="contactlist.title">Contacts</string>
+
+    <string name="addcontact.message.title">Add contact</string>
+    <string name="addcontact.message.add">Accept</string>
+    <string name="addcontact.message.cancel">Cancel</string>
+    <string name="addcontact.message.contactadded">Contant has been added successfully</string>
+    <string name="addcontact.error.message">Unable to add user</string>
+
+</resources>
