@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/861c8acee2dfa076e61284f2861360f296f0ce0d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa472b7cbd3897bf6bed6068ac0b00e494987688">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6c2d447fd6962d35e3f92eb90ffc9d5ece68955a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/757e73f2c2b98dff7182e0be9f29a8e5c2e70a24/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4ec890171a97b5ab98292f131aa784e0f3792c73">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1e9a229ee7285392573c97925f19ec35fd2f763c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc96600ca070668beef95dd928d25c80a767f62">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_87d0f868b9dd87f3d724c90b0d08926165b9ada0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/f72119621a81f1e59a06db35e3f281ea116ca688/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6bb661f84ebf8757aed52b679f64816d15ef32e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/7b096c6f0d91a3a66e17e0111a3ea539107d61c1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cc5be9bbed021c56454a3cad90195b6a0dd94560/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/3c44e4c77d70e6d993413beba004c3fcb4d027f1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_37262f3d7698a305ecae668e9f1e094b15e33f2f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/89e25c17f5c922797e5f768b4d71c579a7d8e4ba/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c1f9b6c10eb9fb5e16d086e0042748ebb522ba83/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/c2d0fb357f2a36afdd99d6281f0852956aa903ca/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="92a1d5f71b0fc8938f1d3f2e6ef984b52b894b4d">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_20cf49417c26eacfab48fdaf098a657a8e3f3fec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_c862eaef2431d3b13e84bebb16a07205084dcdda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/5082550dbf17640975d9361ffafcfc65f4f1061e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6ffe6be832ae90b392bf87cc92067a4403723921/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/70345716a3ccc9d6cbba341798fc51301f8ab56c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_69d35ca29a4514a4c78476c2b6879d78223f270e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/717540a68bd4d6b42e0b8461046c5984122b0472/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9819419ce8d79f3f81a0fc70f9345ac8c843af9c">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0143d52544382091526fa2f6452e8a0ca0a0410c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/788f6dc075fc028b4c17cbbe0eefdd850d0bd2e8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="568d5bda0b4d51f90d978ace369bb9ad024d2057">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0eee0ec759719f05fbc2738c3347b325197787bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/f5f0bd855cd7c0a4e8b238e38799a986c917e5b2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1f280a2ca8572c53a54eefc6d738cd2a489447c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/eed5bdbec904f2691fc018e68efc96caa6e32d0b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="20e1a0f0de6276a5f36062b655f8b20f8cc00cc4">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8c5344fb3d09d55ae6ae0a041a5308a7f9ebeaa9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/19ae4113f03017b7d355a2fd9760819a3ab7133b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a9844d8bb90d82fc71b8cb40fecc18d7c513e75c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/eonoe/.android/build-cache/46055840d1697eb4c261c15a19839472607f8358/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="79e298d7fed2fcada58da7032d07d34ee198a545">
+        <dex dex="/Users/eonoe/Work/Dev/mobile/android/personal/photos-social/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2b324629bfbbee0c8b74b9ae4acb740d1e47a612/classes.dex" />
+    </item>
+
+</items>
