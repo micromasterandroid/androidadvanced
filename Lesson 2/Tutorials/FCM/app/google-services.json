@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "545607290614",
+    "firebase_url": "https://fcmedx.firebaseio.com",
+    "project_id": "fcmedx",
+    "storage_bucket": "fcmedx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545607290614:android:cfda911ffd4de146",
+        "android_client_info": {
+          "package_name": "edu.galileo.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545607290614-3p53b0rpkhdbdjcb7t4h5ophfk61tes1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOacS5Y76M5L1GBkvcOy-DeQvPC1-ky_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
