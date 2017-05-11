@@ -17,7 +17,7 @@ import edu.galileo.android.photofeed.entities.Photo;
 
     @Override
     public void unsubscribe() {
-        repository.unsubscribe();
+        repository.unSubscribe();
     }
 
     @Override

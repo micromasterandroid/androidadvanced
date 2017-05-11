@@ -1,7 +1,8 @@
 package edu.galileo.android.photofeed.photomap;
 
-import com.firebase.client.DataSnapshot;
-import com.firebase.client.FirebaseError;
+import android.text.TextUtils;
+
+import com.google.firebase.database.DatabaseError;
 
 import edu.galileo.android.photofeed.domain.FirebaseAPI;
 import edu.galileo.android.photofeed.domain.FirebaseEventListenerCallback;
@@ -21,28 +22,25 @@ import edu.galileo.android.photofeed.photomap.events.PhotoMapEvent;
     @Override
     public void subscribe() {
         firebase.subscribe(new FirebaseEventListenerCallback() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot) {
+            @Override public void onChildAdded(com.google.firebase.database.DataSnapshot dataSnapshot) {
                 Photo photo = dataSnapshot.getValue(Photo.class);
                 photo.setId(dataSnapshot.getKey());
 
                 String email = firebase.getAuthEmail();
 
-                boolean publishedByMy = photo.getEmail().equals(email);
+                boolean publishedByMy = !TextUtils.isEmpty(email) && !TextUtils.isEmpty(photo.getEmail()) && photo.getEmail().equals(email);
                 photo.setPublishedByMe(publishedByMy);
                 post(PhotoMapEvent.READ_EVENT, photo);
             }
 
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
+            @Override public void onChildRemoved(com.google.firebase.database.DataSnapshot dataSnapshot) {
                 Photo photo = dataSnapshot.getValue(Photo.class);
                 photo.setId(dataSnapshot.getKey());
 
                 post(PhotoMapEvent.DELETE_EVENT, photo);
             }
 
-            @Override
-            public void onCancelled(FirebaseError error) {
+            @Override public void onCancelled(DatabaseError error) {
                 post(error.getMessage());
             }
         });

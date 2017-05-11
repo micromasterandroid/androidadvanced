@@ -1,6 +1,7 @@
 package edu.galileo.android.photofeed.photolist.ui.adapters;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +44,7 @@ import edu.galileo.android.photofeed.lib.base.ImageLoader;
         holder.setOnItemClickListener(currentPhoto, onItemClickListener);
 
         imageLoader.load(holder.imgMain, currentPhoto.getUrl());
-        imageLoader.load(holder.imgAvatar, utils.getAvatarUrl(currentPhoto.getEmail()));
+        imageLoader.load(holder.imgAvatar, TextUtils.isEmpty(currentPhoto.getEmail()) ? "" :utils.getAvatarUrl(currentPhoto.getEmail()));
         holder.txtUser.setText(currentPhoto.getEmail());
         double lat = currentPhoto.getLatitutde();
         double lng = currentPhoto.getLongitude();
