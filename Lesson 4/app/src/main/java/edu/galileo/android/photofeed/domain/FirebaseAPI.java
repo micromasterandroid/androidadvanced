@@ -1,73 +1,78 @@
 package edu.galileo.android.photofeed.domain;
 
+import android.util.Log;
+
 import com.firebase.client.AuthData;
-import com.firebase.client.ChildEventListener;
-import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Map;
 
 import edu.galileo.android.photofeed.entities.Photo;
 
  public class FirebaseAPI {
-    private Firebase firebase;
-    private ChildEventListener photosEventListener;
+    private  Firebase           firebase;
+     private DatabaseReference  mPhotoDatabaseReference;
+    private  ChildEventListener photosEventListener;
 
     public FirebaseAPI(Firebase firebase) {
         this.firebase = firebase;
+        mPhotoDatabaseReference = FirebaseDatabase.getInstance().getReference();
     }
 
     public void checkForData(final FirebaseActionListenerCallback listener){
-        firebase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot snapshot) {
-                if (snapshot.getChildrenCount() > 0) {
+        ValueEventListener postListener = new ValueEventListener() {
+            @Override public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                if (dataSnapshot.getChildrenCount() > 0) {
                     listener.onSuccess();
                 } else {
                     listener.onError(null);
                 }
             }
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-                listener.onError(firebaseError);
+
+            @Override public void onCancelled(DatabaseError databaseError) {
+                Log.d("FIREBASE API", databaseError.getMessage());
             }
-        });
+        };
+        mPhotoDatabaseReference.addValueEventListener(postListener);
     }
 
     public void subscribe(final FirebaseEventListenerCallback listener) {
         if (photosEventListener == null) {
             photosEventListener = new ChildEventListener() {
-                @Override
-                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                @Override public void onChildAdded(com.google.firebase.database.DataSnapshot dataSnapshot, String s) {
                     listener.onChildAdded(dataSnapshot);
                 }
 
-                @Override
-                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                @Override public void onChildChanged(com.google.firebase.database.DataSnapshot dataSnapshot, String s) {
+
                 }
 
-                @Override
-                public void onChildRemoved(DataSnapshot dataSnapshot) {
+                @Override public void onChildRemoved(com.google.firebase.database.DataSnapshot dataSnapshot) {
                     listener.onChildRemoved(dataSnapshot);
                 }
 
-                @Override
-                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                @Override public void onChildMoved(com.google.firebase.database.DataSnapshot dataSnapshot, String s) {
+
                 }
 
-                @Override
-                public void onCancelled(FirebaseError firebaseError) {
-                    listener.onCancelled(firebaseError);
+                @Override public void onCancelled(DatabaseError databaseError) {
+                    listener.onCancelled(databaseError);
                 }
             };
-            firebase.addChildEventListener(photosEventListener);
+            mPhotoDatabaseReference.addChildEventListener(photosEventListener);
         }
     }
 
     public void unsubscribe() {
-        firebase.removeEventListener(photosEventListener);
+        mPhotoDatabaseReference.removeEventListener(photosEventListener);
     }
 
     public String create() {
@@ -75,22 +80,23 @@ import edu.galileo.android.photofeed.entities.Photo;
     }
 
     public void update(Photo photo) {
-        Firebase reference = this.firebase.child(photo.getId());
-        reference.setValue(photo);
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child(photo.getId()).setValue(photo);
     }
 
     public void remove(Photo photo, FirebaseActionListenerCallback listener) {
-        firebase.child(photo.getId()).removeValue();
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child(photo.getId()).removeValue();
+
         listener.onSuccess();
     }
 
     public String getAuthEmail(){
-        String email = null;
-        if (firebase.getAuth() != null) {
-            Map<String, Object> providerData = firebase.getAuth().getProviderData();
-            email = providerData.get("email").toString();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            return user.getEmail();
         }
-        return email;
+        return null;
     }
 
     public void signUp(String email, String password, final FirebaseActionListenerCallback listener){

@@ -4,6 +4,6 @@ import edu.galileo.android.photofeed.entities.Photo;
 
  public interface PhotoListRepository {
     void subscribe();
-    void unsubscribe();
+    void unSubscribe();
     void remove(Photo photo);
 }

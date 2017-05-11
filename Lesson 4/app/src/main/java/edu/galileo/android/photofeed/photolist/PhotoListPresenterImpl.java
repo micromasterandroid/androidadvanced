@@ -11,7 +11,7 @@ import edu.galileo.android.photofeed.photolist.ui.PhotoListView;
     EventBus eventBus;
     PhotoListView view;
     PhotoListInteractor interactor;
-    private final static String EMPTY_LIST = "Listado vacío";
+    private final static String EMPTY_LIST = "Empty list";
 
     public PhotoListPresenterImpl(EventBus eventBus, PhotoListView view, PhotoListInteractor interactor) {
         this.eventBus = eventBus;
