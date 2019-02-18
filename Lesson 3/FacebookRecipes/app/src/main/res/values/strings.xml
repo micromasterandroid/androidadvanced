@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FacebookRecipes</string>
+    <string name="login.error">Imposible iniciar sesión %s</string>
+    <string name="login.cancel.error">Inicio de sesión cancelado</string>
+    <string name="recipemain.error">Imposible obtener información %s</string>
+    <string name="recipemain.notice.saved">Guardado exitosamente</string>
+    <string name="recipemain.menu.action.list">Recetas guardadas</string>
+
+    <string name="global.menu.action.logout">Cerrar sesión</string>
+    <string name="recipemain.menu.action.main">Elegir receta</string>
+
+    <string name="facebook_app_id"></string>
+	<!--the protocol scheme has the same value as the app_id, except it has 'fb' in front, like
+		app_id = 123456
+		protocol = fb12345
+	-->
+    <string name="fb_login_protocol_scheme"></string>
+</resources>
