@@ -22,6 +22,7 @@ public class RecipeListRepositoryImpl implements RecipeListRepository {
 
     @Override
     public void getSavedRecipes() {
+
         FlowCursorList<Recipe> storedRecipes = SQLite.select()
                 .from(Recipe.class)
                 .cursorList();
