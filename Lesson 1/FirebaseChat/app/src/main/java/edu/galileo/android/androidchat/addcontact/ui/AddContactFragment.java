@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import edu.galileo.android.androidchat.R;
 import edu.galileo.android.androidchat.addcontact.AddContactPresenter;
@@ -27,8 +27,8 @@ public class AddContactFragment extends DialogFragment
                                 implements AddContactView,
                                             DialogInterface.OnShowListener {
 
-    @Bind(R.id.editTxtEmail)        EditText inputEmail;
-    @Bind(R.id.progressBar)         ProgressBar progressBar;
+    @BindView(R.id.editTxtEmail)        EditText inputEmail;
+    @BindView(R.id.progressBar)         ProgressBar progressBar;
     private AddContactPresenter addContactPresenter;
 
     public AddContactFragment() {

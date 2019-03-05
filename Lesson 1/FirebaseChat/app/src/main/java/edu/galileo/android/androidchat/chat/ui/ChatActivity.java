@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -28,12 +28,12 @@ import edu.galileo.android.androidchat.lib.ImageLoader;
 public class ChatActivity extends AppCompatActivity
                           implements ChatView {
 
-    @Bind(R.id.toolbar)              Toolbar toolbar;
-    @Bind(R.id.txtUser)              TextView txtUser;
-    @Bind(R.id.txtStatus)            TextView txtStatus;
-    @Bind(R.id.editTxtMessage)       EditText inputMessage;
-    @Bind(R.id.messageRecyclerView)  RecyclerView recyclerView;
-    @Bind(R.id.imgAvatar)            CircleImageView imgAvatar;
+    @BindView(R.id.toolbar)              Toolbar toolbar;
+    @BindView(R.id.txtUser)              TextView txtUser;
+    @BindView(R.id.txtStatus)            TextView txtStatus;
+    @BindView(R.id.editTxtMessage)       EditText inputMessage;
+    @BindView(R.id.messageRecyclerView)  RecyclerView recyclerView;
+    @BindView(R.id.imgAvatar)            CircleImageView imgAvatar;
 
     public final static String EMAIL_KEY = "email";
     public final static String ONLINE_KEY = "online";

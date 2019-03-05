@@ -11,7 +11,7 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.galileo.android.androidchat.AndroidChatApplication;
@@ -28,8 +28,8 @@ import edu.galileo.android.androidchat.login.ui.LoginActivity;
 public class ContactListActivity extends AppCompatActivity
                                  implements ContactListView, OnItemClickListener {
 
-    @Bind(R.id.toolbar) Toolbar toolbar;
-    @Bind(R.id.recyclerViewContacts) RecyclerView recyclerView;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.recyclerViewContacts) RecyclerView recyclerView;
 
     private ContactListAdapter adapter;
     private ContactListPresenter contactListPresenter;

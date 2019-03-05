@@ -10,7 +10,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import butterknife.Bind;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.galileo.android.androidchat.R;
@@ -21,12 +22,12 @@ import edu.galileo.android.androidchat.login.ui.LoginView;
 
 public class LoginActivity extends AppCompatActivity
                            implements LoginView {
-    @Bind(R.id.btnSignin)           Button btnSignIn;
-    @Bind(R.id.btnSignup)           Button btnSignUp;
-    @Bind(R.id.editTxtEmail)        EditText inputEmail;
-    @Bind(R.id.editTxtPassword)     EditText inputPassword;
-    @Bind(R.id.progressBar)         ProgressBar progressBar;
-    @Bind(R.id.layoutMainContainer) RelativeLayout container;
+    @BindView(R.id.btnSignin)           Button btnSignIn;
+    @BindView(R.id.btnSignup)           Button btnSignUp;
+    @BindView(R.id.editTxtEmail)        EditText inputEmail;
+    @BindView(R.id.editTxtPassword)     EditText inputPassword;
+    @BindView(R.id.progressBar)         ProgressBar progressBar;
+    @BindView(R.id.layoutMainContainer) RelativeLayout container;
 
     private LoginPresenter loginPresenter;
 
