@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "edu.galileo.android.photofeed"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            resValue "string", "CLOUDINARY_URL", project.property('CLOUDINARY_URL')
+            resValue "string", "GOOGLE_MAPS_API_KEY", project.property('GOOGLE_MAPS_API_KEY')
+        }
+
+        debug {
+            resValue "string", "CLOUDINARY_URL", project.property('CLOUDINARY_URL')
+            resValue "string", "GOOGLE_MAPS_API_KEY", project.property('GOOGLE_MAPS_API_KEY')
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+
+    implementation "com.google.dagger:dagger-android-support:$rootProject.ext.daggerVersion"
+    implementation "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+
+    implementation "javax.annotation:jsr250-api:$rootProject.ext.jsr250Version"
+
+    implementation "com.firebase:firebase-client-android:$rootProject.ext.firebaseClientVersion"
+    implementation "com.google.firebase:firebase-database:$rootProject.ext.firebaseVersion"
+    implementation "com.google.firebase:firebase-auth:$rootProject.ext.firebaseVersion"
+    implementation "com.google.firebase:firebase-core:$rootProject.ext.firebaseVersion"
+
+    implementation "com.google.android.gms:play-services-location:$rootProject.ext.playServicesLocationVersion"
+    implementation "com.google.android.gms:play-services-places:$rootProject.ext.playServicesLocationVersion"
+
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+
+    implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleImageViewVersion"
+    implementation "com.cloudinary:cloudinary-android:$rootProject.ext.cloudinaryVersion"
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    implementation "org.greenrobot:eventbus:$rootProject.ext.eventbusVersion"
+}
+
+apply plugin: 'com.google.gms.google-services'
