@@ -10,6 +10,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -47,6 +48,7 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
 
     implementation "javax.annotation:jsr250-api:$rootProject.ext.jsr250Version"
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
 
     implementation "com.firebase:firebase-client-android:$rootProject.ext.firebaseClientVersion"
     implementation "com.google.firebase:firebase-database:$rootProject.ext.firebaseVersion"
@@ -54,14 +56,13 @@ dependencies {
     implementation "com.google.firebase:firebase-core:$rootProject.ext.firebaseVersion"
 
     implementation "com.google.android.gms:play-services-location:$rootProject.ext.playServicesLocationVersion"
-    implementation "com.google.android.gms:play-services-places:$rootProject.ext.playServicesLocationVersion"
+    implementation "com.google.android.libraries.places:places-compat:1.0.0"
 
     implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
 
     implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleImageViewVersion"
     implementation "com.cloudinary:cloudinary-android:$rootProject.ext.cloudinaryVersion"
-    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
     implementation "org.greenrobot:eventbus:$rootProject.ext.eventbusVersion"
 }
 

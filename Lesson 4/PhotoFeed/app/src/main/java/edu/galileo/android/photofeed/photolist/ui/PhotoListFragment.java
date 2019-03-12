@@ -2,6 +2,7 @@ package edu.galileo.android.photofeed.photolist.ui;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -16,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
 
 import java.io.ByteArrayOutputStream;
 
@@ -120,7 +120,7 @@ public class PhotoListFragment extends Fragment implements PhotoListView, OnItem
 
     @Override
     public void onShareClick(Photo photo, ImageView img) {
-        Bitmap bitmap = ((GlideBitmapDrawable)img.getDrawable()).getBitmap();
+        Bitmap bitmap = ((BitmapDrawable)img.getDrawable()).getBitmap();
         Intent share = new Intent(Intent.ACTION_SEND);
         share.setType("image/jpeg");
 
